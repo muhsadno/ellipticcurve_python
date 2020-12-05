@@ -92,10 +92,3 @@ print(mulEC(2,P,E))
 
 for t in range(1,p):
     print(t,mulEC(t,P,E))
-
-        
-
-        
-    
-    
-    
