@@ -78,5 +78,5 @@ print("\nOne point in E = ",P)
 
 #Addition and Multiplication on E
 Q = addEC(P,P,E)
-print("\n"+str(Q))
-print(mulEC(2,P,E))
+print("\nP+P =",Q)
+print("2*P =",mulEC(2,P,E))
