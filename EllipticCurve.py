@@ -5,6 +5,7 @@ pE = [] #one point in E
 def GenCurve(p):
     #p : prime
     #Generate elliptic curve E : y^3 = x^2 + ax + b (mod p)
+    #Return Elliptic Curve EC = [a,b,p]
     a=rn.randint(0,p-1)
     x=rn.randint(0,p-1)
     y=rn.randint(1,p-1)
