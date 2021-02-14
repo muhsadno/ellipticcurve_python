@@ -74,7 +74,7 @@ print("\nElliptic Curve E : y^2 = x^3 + {}x + {} (mod {})".format(E[0],E[1],E[2]
 
 #One point in E
 P=pE
-print("\nOne point in E = ",P)
+print("\nOne point in E: P=",P)
 
 #Addition and Multiplication on E
 Q = addEC(P,P,E)
