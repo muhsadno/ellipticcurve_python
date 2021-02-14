@@ -67,7 +67,7 @@ def mulEC(k,P,E):
 #Main Program
 
 #Generate Curve
-p=31
+p=281 #set p as a prime number
 E=GenCurve(p)
 print("\nElliptic Curve E : y^2 = x^3 + {}x + {} (mod {})".format(E[0],E[1],E[2]))
 
