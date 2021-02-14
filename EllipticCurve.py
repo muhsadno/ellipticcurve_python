@@ -75,20 +75,7 @@ print("\nElliptic Curve E : y^2 = x^3 + {}x + {} (mod {})".format(E[0],E[1],E[2]
 P=pE
 print("\nOne point in E = ",P)
 
-#The number of points in E
-count=0
-for x in range(0,p):
-    ys=(x**3+E[0]*x+E[1])%p
-    chk=pow(ys,(p-1)//2,p) #check with Legendre symbol
-    print(chk)
-    if chk==1:
-        count+=1
-print("\nThe number of points in E =",count+1)
-
 #Addition and Multiplication on E
 Q = addEC(P,P,E)
 print("\n"+str(Q))
 print(mulEC(2,P,E))
-
-for t in range(1,p):
-    print(t,mulEC(t,P,E))
