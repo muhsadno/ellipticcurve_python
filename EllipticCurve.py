@@ -4,7 +4,7 @@ pE = [] #one point in E
 
 def GenCurve(p):
     #p : prime
-    #Generate elliptic curve E : y^3 = x^2 + ax + b (mod p)
+    #Generate elliptic curve E : y^2 = x^3 + ax + b (mod p)
     #Return Elliptic Curve EC = [a,b,p]
     a=rn.randint(0,p-1)
     x=rn.randint(0,p-1)
@@ -23,11 +23,11 @@ def GenCurve(p):
     return [a,b,p]
 
 def addEC(P, Q, E):
-    #Elliptic curve E : y^3 = x^2 + ax + b (mod p)
+    #Elliptic curve E : y^2 = x^3 + ax + b (mod p)
     # E = [a,b,p] 
     # P=[x1,y1] , Q=[x2,y2]
-    
-    O = ['Inf','Inf'] #Infinity Point
+   
+    O = ('Inf','Inf') #Infinity Point
     p=E[2]
     a=E[0]
     x1=P[0]
@@ -53,7 +53,7 @@ def addEC(P, Q, E):
             s=((3*x1**2+a)*u)%p
         x3=(s**2-x1-x2)%p
         y3=(s*(x1-x3)-y1)%p
-        return [x3,y3]
+        return (x3,y3)
         
 def mulEC(k,P,E):
     #k*P = P + P + ... + P (k times addition) on E
