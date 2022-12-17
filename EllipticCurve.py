@@ -20,7 +20,7 @@ def GenCurve(p):
     
     global pE
     pE = [x,y]
-    return [a,b,p]
+    return (a,b,p)
 
 def addEC(P, Q, E):
     #Elliptic curve E : y^2 = x^3 + ax + b (mod p)
@@ -30,10 +30,8 @@ def addEC(P, Q, E):
     O = ('Inf','Inf') #Infinity Point
     p=E[2]
     a=E[0]
-    x1=P[0]
-    y1=P[1]
-    x2=Q[0]
-    y2=Q[1]
+    x1, y1 = P
+    x2, y2 = Q
     
     if x1=='Inf' or x2=='Inf':
         if x1=='Inf':
