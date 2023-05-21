@@ -1,7 +1,5 @@
 import random as rn
 
-pE = [] #one point in E
-
 def GenCurve(p):
     #p : prime
     #Generate elliptic curve E : y^2 = x^3 + ax + b (mod p)
@@ -19,7 +17,7 @@ def GenCurve(p):
         D=(4*a**3+27*b**2)%p
     
     global pE
-    pE = [x,y]
+    pE = (x,y)
     return (a,b,p)
 
 def addEC(P, Q, E):
@@ -68,7 +66,8 @@ def mulEC(k,P,E):
 #Generate Curve
 p=281 #set p as a prime number
 E=GenCurve(p)
-print("\nElliptic Curve E : y^2 = x^3 + {}x + {} (mod {})".format(E[0],E[1],E[2]))
+#print("\nElliptic Curve E : y^2 = x^3 + {}x + {} (mod {})".format(E[0],E[1],E[2]))
+print(f"\nElliptic Curve E : y^2 = x^3 + {E[0]}x + {E[1]} (mod {E[2]})")
 
 #One point in E
 P=pE
